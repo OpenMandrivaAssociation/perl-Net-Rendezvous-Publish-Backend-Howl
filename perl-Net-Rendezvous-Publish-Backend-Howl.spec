@@ -8,7 +8,6 @@ Group:		Development/Perl
 Summary:    Backend module using howl for Net::Rendezvous
 Source0:    http://search.cpan.org//CPAN/authors/id/R/RC/RCLAMP/%{realname}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:	perl-devel 
 BuildRequires:  perl-Net-Rendezvous 
 BuildRequires:	howl-devel
