@@ -2,7 +2,7 @@
 
 Name:		perl-%{realname}
 Version:    0.03
-Release:    %mkrel 6
+Release:    %mkrel 7
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    Backend module using howl for Net::Rendezvous
