@@ -2,7 +2,7 @@
 
 Name:		perl-%{realname}
 Version:    0.03
-Release:    %mkrel 7
+Release:    %mkrel 8
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:    Backend module using howl for Net::Rendezvous
@@ -16,7 +16,6 @@ BuildRequires:  perl-Module-Build
 BuildRequires:  perl-ExtUtils-ParseXS
 BuildRequires:  perl-ExtUtils-CBuilder
 BuildRequires:  perl-Module-Pluggable
-BuildRequires:  perl-Net-Rendezvous-Publish
 BuildRequires:  perl-Class-Accessor-Lvalue
 Provides:       perl-Net-Rendezvous-Publish-Backend
 
