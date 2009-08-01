@@ -1,22 +1,25 @@
-%define realname   Net-Rendezvous-Publish-Backend-Howl
+%define upstream_name    Net-Rendezvous-Publish-Backend-Howl
+%define upstream_version 0.03
 
-Name:		perl-%{realname}
-Version:    0.03
-Release:    %mkrel 11
-License:	GPL or Artistic
-Group:		Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    Backend module using howl for Net::Rendezvous
-Source0:    http://search.cpan.org//CPAN/authors/id/R/RC/RCLAMP/%{realname}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel 
-BuildRequires:  perl-Net-Rendezvous 
+License:	GPL+ or Artistic
+Group:		Development/Perl
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://search.cpan.org//CPAN/authors/id/R/RC/RCLAMP/%{upstream_name}-%{upstream_version}.tar.bz2
+
 BuildRequires:	howl-devel
+BuildRequires:  perl-Net-Rendezvous 
 BuildRequires:  perl-Module-Build
 BuildRequires:  perl-ExtUtils-ParseXS
 BuildRequires:  perl-ExtUtils-CBuilder
 BuildRequires:  perl-Module-Pluggable
 BuildRequires:  perl-Class-Accessor-Lvalue
+BuildRequires:	perl-devel 
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 Provides:       perl-Net-Rendezvous-Publish-Backend
 
 %description
@@ -26,7 +29,7 @@ It is used by Net::Rendezvous::Publish, in order to adapt to
 different mDns implementation.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Build.PL INSTALLDIRS=vendor
@@ -47,5 +50,3 @@ rm -rf $RPM_BUILD_ROOT
 %doc Changes
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
-
-
