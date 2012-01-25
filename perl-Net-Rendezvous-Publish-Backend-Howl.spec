@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 1
+Release:	2
 
 Summary:    Backend module using howl for Net::Rendezvous
 License:	GPL+ or Artistic
