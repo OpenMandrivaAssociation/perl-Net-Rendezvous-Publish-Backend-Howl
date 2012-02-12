@@ -13,14 +13,13 @@ Source0:	http://search.cpan.org//CPAN/authors/id/R/RC/RCLAMP/%{upstream_name}-%{
 Source1:	%{name}.rpmlintrc
 
 BuildRequires:	howl-devel
-BuildRequires:	perl-Net-Rendezvous 
-BuildRequires:	perl-Module-Build
-BuildRequires:	perl-ExtUtils-ParseXS
-BuildRequires:	perl-ExtUtils-CBuilder
-BuildRequires:	perl-Module-Pluggable
-BuildRequires:	perl-Class-Accessor-Lvalue
+BuildRequires:	perl(Net::Rendezvous)
+BuildRequires:	perl(Module::Build)
+BuildRequires:	perl(ExtUtils::ParseXS)
+BuildRequires:	perl(ExtUtils::CBuilder)
+BuildRequires:	perl(Module::Pluggable)
+BuildRequires:	perl(Class::Accessor::Lvalue)
 BuildRequires:	perl-devel 
-Provides:	perl-Net-Rendezvous-Publish-Backend
 
 %description
 This module interfaces to the Porchdog's Howl library in order to allow 
@@ -39,7 +38,7 @@ perl Build.PL INSTALLDIRS=vendor
 #./Build test
 
 %install
-./Build install destdir=%buildroot installdirs=vendor
+./Build install destdir=%{buildroot} installdirs=vendor
 
 %files
 %doc Changes
