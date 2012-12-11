@@ -1,0 +1,5 @@
+from Config import *
+from os import environ
+
+addFilter('perl-Net-Rendezvous-Publish-Backend-Howl-debug.*: description-line-too-long (\(.*\) |)C This package provides debug information for package perl-Net-Rendezvous-Publish-Backend-Howl\.')
+
