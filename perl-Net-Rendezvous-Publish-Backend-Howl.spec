@@ -8,7 +8,7 @@ Release:	4
 Summary:	Backend module using howl for Net::Rendezvous
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://search.cpan.org//CPAN/authors/id/R/RC/RCLAMP/%{upstream_name}-%{upstream_version}.tar.bz2
 Source1:	%{name}.rpmlintrc
 
